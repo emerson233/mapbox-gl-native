@@ -7,6 +7,7 @@
 #include <mbgl/util/tileset.hpp>
 
 #include <cassert>
+#include <stdlib.h>
 
 namespace mbgl {
 
@@ -22,7 +23,7 @@ TileLoader<T>::TileLoader(T& tile_,
     : tile(tile_),
       necessity(TileNecessity::Optional),
       resource(Resource::tile(
-        tileset.tiles.at(0),
+        tileset.tiles.at(rand() % tileset.tiles.size()),
         parameters.pixelRatio,
         id.canonical.x,
         id.canonical.y,
