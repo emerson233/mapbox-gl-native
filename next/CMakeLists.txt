@@ -42,7 +42,6 @@ add_compile_options(
     $<$<COMPILE_LANGUAGE:CXX>:-fno-rtti>
     $<$<AND:$<COMPILE_LANGUAGE:CXX>,$<NOT:$<PLATFORM_ID:Windows>>>:-Wall>
     $<$<AND:$<COMPILE_LANGUAGE:CXX>,$<NOT:$<PLATFORM_ID:Windows>>>:-Wextra>
-    $<$<AND:$<COMPILE_LANGUAGE:CXX>,$<NOT:$<PLATFORM_ID:Windows>>>:-Werror>
     $<$<AND:$<COMPILE_LANGUAGE:CXX>,$<PLATFORM_ID:Android>>:-Wno-error=tautological-constant-compare>
     $<$<CXX_COMPILER_ID:GNU>:-Wno-error=maybe-uninitialized>
     $<$<CXX_COMPILER_ID:GNU>:-Wno-error=return-type>
